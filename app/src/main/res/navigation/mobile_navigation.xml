@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/HomeFrag">
+
+    <fragment
+        android:id="@+id/HomeFrag"
+        android:name="mx.itesm.bcr.plantifybcr.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_HomeFrag_to_plantaEspFrag"
+            app:destination="@id/plantaEspFrag" />
+        <action
+            android:id="@+id/action_HomeFrag_to_gruposPlantasFrag"
+            app:destination="@id/gruposPlantasFrag" />
+        <action
+            android:id="@+id/action_HomeFrag_to_grupoEspPlantasFrag"
+            app:destination="@id/grupoEspPlantasFrag" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/wikiFrag"
+        android:name="mx.itesm.bcr.plantifybcr.ui.dashboard.DashboardFragment"
+        android:label="@string/title_wiki"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_wikiFrag_to_infoWikiPlantaFrag"
+            app:destination="@id/infoWikiPlantaFrag" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ajustesFrag"
+        android:name="mx.itesm.bcr.plantifybcr.ui.notifications.NotificationsFragment"
+        android:label="@string/title_configuration"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/plantaEspFrag"
+        android:name="mx.itesm.bcr.plantifybcr.PlantaEspFrag"
+        android:label="planta_esp_fragment"
+        tools:layout="@layout/planta_esp_fragment" >
+        <argument
+            android:name="NombrePlanta"
+            app:argType="string" />
+        <argument
+            android:name="tokken"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoUsuarioFrag"
+        android:name="mx.itesm.bcr.plantifybcr.InfoUsuarioFrag"
+        android:label="info_usuario_fragment"
+        tools:layout="@layout/info_usuario_fragment" />
+    <fragment
+        android:id="@+id/sensoresFrag"
+        android:name="mx.itesm.bcr.plantifybcr.SensoresFrag"
+        android:label="sensores_fragment"
+        tools:layout="@layout/sensores_fragment" />
+    <fragment
+        android:id="@+id/grupoEspPlantasFrag"
+        android:name="mx.itesm.bcr.plantifybcr.GrupoEspPlantasFrag"
+        android:label="grupo_esp_plantas_fragment"
+        tools:layout="@layout/grupo_esp_plantas_fragment" >
+        <argument
+            android:name="NombreGrupo"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/gruposPlantasFrag"
+        android:name="mx.itesm.bcr.plantifybcr.GruposPlantasFrag"
+        android:label="grupos_plantas_fragment"
+        tools:layout="@layout/grupos_plantas_fragment" />
+    <fragment
+        android:id="@+id/tutorialesFrag"
+        android:name="mx.itesm.bcr.plantifybcr.TutorialesFrag"
+        android:label="tutoriales_fragment"
+        tools:layout="@layout/tutoriales_fragment" />
+    <fragment
+        android:id="@+id/acercaDeFrag"
+        android:name="mx.itesm.bcr.plantifybcr.AcercaDeFrag"
+        android:label="acerca_de_fragment"
+        tools:layout="@layout/acerca_de_fragment" />
+    <fragment
+        android:id="@+id/agregarGrupoFrag"
+        android:name="mx.itesm.bcr.plantifybcr.AgregarGrupoFrag"
+        android:label="agregar_grupo_fragment"
+        tools:layout="@layout/agregar_grupo_fragment" />
+    <fragment
+        android:id="@+id/agregarPlantaFrag"
+        android:name="mx.itesm.bcr.plantifybcr.AgregarPlantaFrag"
+        android:label="@string/title_addPlant"
+        tools:layout="@layout/agregar_planta_fragment" />
+    <fragment
+        android:id="@+id/infoWikiPlantaFrag"
+        android:name="mx.itesm.bcr.plantifybcr.InfoWikiPlantaFrag"
+        android:label="info_wiki_planta_fragment"
+        tools:layout="@layout/info_wiki_planta_fragment" >
+        <argument
+            android:name="PlantaWiki"
+            app:argType="string" />
+    </fragment>
+</navigation>
